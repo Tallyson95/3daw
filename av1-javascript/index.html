@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Perguntas e Respostas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Perguntas e Respostas</h1>
+
+    <h2>Cadastro de Usuários</h2>
+    <form id="usuarioForm">
+        <input type="hidden" name="tipo" value="usuario">
+        <label for="usuario">Nome de Usuário:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        
+        <label for="senha">Senha:</label>
+        <input type="text" id="senha" name="senha" required>
+
+        <button type="submit">Cadastrar Usuário</button>
+    </form>
+
+    <h2>Perguntas Cadastradas</h2>
+    <form id="perguntaForm">
+        <label for="texto">Texto da Pergunta:</label>
+        <input type="text" id="texto" name="texto" required>
+
+        <label>Respostas:</label>
+        <label for="respostaA">A:</label>
+        <input type="text" id="respostaA" name="respostaA" required>
+        <label for="respostaB">B:</label>
+        <input type="text" id="respostaB" name="respostaB" required>
+        <label for="respostaC">C:</label>
+        <input type="text" id="respostaC" name="respostaC" required>
+        <label for="respostaD">D:</label>
+        <input type="text" id="respostaD" name="respostaD" required>
+
+        <label for="respostaCorreta">Resposta Correta (A, B, C ou D):</label>
+        <input type="text" id="respostaCorreta" name="respostaCorreta" required>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pergunta</th>
+                <th>Respostas</th>
+                <th>Resposta Correta</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody id="perguntasTabela"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
